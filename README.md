@@ -1,0 +1,4 @@
+# ArknightsAutoTest
+明日方舟护肝小助手
+基于Airtest实现
+具体操作见ArknightsAutoTest教程

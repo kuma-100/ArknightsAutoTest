@@ -43,6 +43,8 @@ def AutoMission():
         sleep(3)
         if exists(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080))):
             touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
+            wait(Template(r"tpl1595558180220.png", record_pos=(-0.247, -0.209), resolution=(2280, 1080)))
+
     touch(Template(r"tpl1594297174980.png", record_pos=(0.131, -0.211), resolution=(2280, 1080)))
     sleep(3)
     while exists(Template(r"tpl1594297115457.png", record_pos=(0.277, -0.143), resolution=(2280, 1080))) and not exists(Template(r"tpl1594346724835.png", record_pos=(0.111, 0.068), resolution=(2280, 1080))):
@@ -50,6 +52,7 @@ def AutoMission():
         sleep(3)
         if exists(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080))):
             touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
+            wait(Template(r"tpl1595558180220.png", record_pos=(-0.247, -0.209), resolution=(2280, 1080)))
     touch(Template(r"tpl1594297411538.png", record_pos=(-0.427, -0.211), resolution=(2280, 1080)))
 
 #自动获取信用

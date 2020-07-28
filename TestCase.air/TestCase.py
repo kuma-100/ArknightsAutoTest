@@ -31,28 +31,26 @@ def AutoFight(cnt,model=1):
             sleep(2)
             touch(Template(r"tpl1594286088698.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
 
-
+#点击领取任务奖励
+def ReceiveTaskRewards():
+    while exists(Template(r"tpl1594297115457.png", threshold=0.9, record_pos=(0.277, -0.143), resolution=(2280, 1080))) and not exists(Template(r"tpl1594346724835.png", record_pos=(0.111, 0.068), resolution=(2280, 1080))):
+        touch(Template(r"tpl1594297115457.png", record_pos=(0.277, -0.143), resolution=(2280, 1080)))
+        sleep(3)
+        if exists(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080))):
+            while exists(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080))):
+                touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
+                sleep(3)
+            wait(Template(r"tpl1595558180220.png", record_pos=(-0.247, -0.209), resolution=(2280, 1080)))
             
 #自动领取任务奖励
 def AutoMission():
     if exists(Template(r"tpl1594297049971.png", record_pos=(0.192, 0.136), resolution=(2280, 1080))):
         touch(Template(r"tpl1594297072812.png", record_pos=(0.108, 0.147), resolution=(2280, 1080)))
         sleep(3)
-    while exists(Template(r"tpl1594297115457.png", threshold=0.9, record_pos=(0.277, -0.143), resolution=(2280, 1080))) and not exists(Template(r"tpl1594346724835.png", record_pos=(0.111, 0.068), resolution=(2280, 1080))):
-        touch(Template(r"tpl1594297115457.png", record_pos=(0.277, -0.143), resolution=(2280, 1080)))
-        sleep(3)
-        if exists(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080))):
-            touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
-            wait(Template(r"tpl1595558180220.png", record_pos=(-0.247, -0.209), resolution=(2280, 1080)))
-
+        ReceiveTaskRewards()
     touch(Template(r"tpl1594297174980.png", record_pos=(0.131, -0.211), resolution=(2280, 1080)))
     sleep(3)
-    while exists(Template(r"tpl1594297115457.png", record_pos=(0.277, -0.143), resolution=(2280, 1080))) and not exists(Template(r"tpl1594346724835.png", record_pos=(0.111, 0.068), resolution=(2280, 1080))):
-        touch(Template(r"tpl1594297115457.png", record_pos=(0.277, -0.143), resolution=(2280, 1080)))
-        sleep(3)
-        if exists(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080))):
-            touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
-            wait(Template(r"tpl1595558180220.png", record_pos=(-0.247, -0.209), resolution=(2280, 1080)))
+    ReceiveTaskRewards()
     touch(Template(r"tpl1594297411538.png", record_pos=(-0.427, -0.211), resolution=(2280, 1080)))
 
 #自动获取信用

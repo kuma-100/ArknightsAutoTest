@@ -15,6 +15,7 @@ opear_conf = {
     "2":"剿灭用:单关卡循环刷图（需选中关卡）",
     "3":"自动领取任务奖励（需保证界面在主页）",
     "4":"自动获取信用（需保证界面在主页）",
+    "5":"完成公开招募领取干员（需保证界面在主页）",
 }
 
 print_info = """
@@ -25,6 +26,7 @@ print_info = """
 【2】剿灭用:单关卡循环刷图（需选中关卡）
 【3】自动领取任务奖励（需保证界面在主页）
 【4】自动获取信用（需保证界面在主页）
+【5】完成公开招募领取干员（需保证界面在主页）
 【88】退出,也可直接右上角关闭
 """
 
@@ -50,15 +52,5 @@ while True:
         TestCase.AutoMission()
     if "4" == opear:
         TestCase.CreditAccess()
-
-    
-
-
-#执行脚本,使用时把对应行代码前的#字去掉，不需要使用时把#加上，每次只能跑一个指令
-#单关卡循环刷图+自动吃药，括号内数字为次数，剿灭model为4
-#TestCase.AutoFight(5)
-#TestCase.AutoFight(4,4)#剿灭用，每周一日常跑
-#自动领取任务奖励
-#TestCase.AutoMission()
-#自动获取信用
-#TestCase.CreditAccess()
+    if "5" == opear:
+        TestCase.CompleteOpenRecruitment()

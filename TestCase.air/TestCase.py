@@ -48,10 +48,10 @@ def AutoMission():
         touch(Template(r"tpl1594297072812.png", record_pos=(0.108, 0.147), resolution=(2280, 1080)))
         sleep(3)
         ReceiveTaskRewards()
-    touch(Template(r"tpl1594297174980.png", record_pos=(0.131, -0.211), resolution=(2280, 1080)))
-    sleep(3)
-    ReceiveTaskRewards()
-    touch(Template(r"tpl1594297411538.png", record_pos=(-0.427, -0.211), resolution=(2280, 1080)))
+        touch(Template(r"tpl1594297174980.png", record_pos=(0.131, -0.211), resolution=(2280, 1080)))
+        sleep(3)
+        ReceiveTaskRewards()
+        touch(Template(r"tpl1594297411538.png", record_pos=(-0.427, -0.211), resolution=(2280, 1080)))
 
 #自动获取信用
 def CreditAccess():
@@ -82,4 +82,22 @@ def start_game():
     touch(Template(r"tpl1594892913227.png", record_pos=(-0.003, 0.205), resolution=(2280, 1080)))
     wait(Template(r"tpl1594892983839.png", record_pos=(-0.002, 0.098), resolution=(2280, 1080)),timeout)
     touch(Template(r"tpl1594892983839.png", record_pos=(-0.002, 0.098), resolution=(2280, 1080)))
+
+#完成公开招募领取干员
+def CompleteOpenRecruitment():
+    if exists(Template(r"tpl1596594372082.png", record_pos=(0.324, 0.077), resolution=(2280, 1080))):
+        touch(Template(r"tpl1596594398713.png", record_pos=(0.273, 0.099), resolution=(2280, 1080)))
+        while exists(Template(r"tpl1596594437987.png", record_pos=(-0.207, 0.014), resolution=(2280, 1080))):
+            touch(Template(r"tpl1596594437987.png", record_pos=(-0.207, 0.014), resolution=(2280, 1080)))
+            wait(Template(r"tpl1596594512366.png", record_pos=(0.426, -0.208), resolution=(2280, 1080)))
+            touch(Template(r"tpl1596594512366.png", record_pos=(0.426, -0.208), resolution=(2280, 1080)))
+            touch(Template(r"tpl1596594609163.png", record_pos=(0.219, 0.056), resolution=(2280, 1080)))
+
+
+
+
+        
+
+
+
 

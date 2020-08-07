@@ -87,6 +87,7 @@ def start_game():
 def CompleteOpenRecruitment():
     if exists(Template(r"tpl1596594372082.png", record_pos=(0.324, 0.077), resolution=(2280, 1080))):
         touch(Template(r"tpl1596594398713.png", record_pos=(0.273, 0.099), resolution=(2280, 1080)))
+        sleep(3)
         while exists(Template(r"tpl1596594437987.png", record_pos=(-0.207, 0.014), resolution=(2280, 1080))):
             touch(Template(r"tpl1596594437987.png", record_pos=(-0.207, 0.014), resolution=(2280, 1080)))
             wait(Template(r"tpl1596594512366.png", record_pos=(0.426, -0.208), resolution=(2280, 1080)))

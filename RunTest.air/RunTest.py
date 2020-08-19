@@ -7,7 +7,31 @@ from airtest.core.api import using
 using("TestCase.air")
 import TestCase
 
-auto_setup(__file__,devices=["Android:///"])
+#优先连接手机，其次连接模拟器（目前仅支持网易mumu）
+try:
+#     dev = connect_device("Android:///")
+    dev = connect_device("Android:///?cap_method=JAVACAP")
+except:
+    dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:7555?cap_method=JAVACAP^&^&ori_method=ADBORI")
+
+#针对miui11以上出现minicap server setup timeout问题的特殊处理
+# if dev.get_default_device()=="rc5dofeyhah6ibpn":#My RedmiK30 Ultra
+#     print("==11==",dev.cap_method)
+#     print("====",dev.minicap.get_stream())
+#     del dev
+#     dev = connect_device("Android:///?cap_method=JAVACAP")
+#     print(dev.cap_method)
+# 针对minicap
+# try:
+#     dev.minicap.get_stream()
+# except:
+#     del dev
+#     dev = connect_device("Android:///?cap_method=JAVACAP")
+# #     dev.set_current(1)
+#     print("=========",dev.cap_method)
+
+    
+auto_setup(__file__)
 
 opear_conf = {
     "0":"启动游戏",
@@ -16,6 +40,8 @@ opear_conf = {
     "3":"自动领取任务奖励（需保证界面在主页）",
     "4":"自动获取信用（需保证界面在主页）",
     "5":"完成公开招募领取干员（需保证界面在主页）",
+    "6":"跳过弹窗",
+    "7":"周一批量刷剿灭脚本",
 }
 
 print_info = """
@@ -27,8 +53,12 @@ print_info = """
 【3】自动领取任务奖励（需保证界面在主页）
 【4】自动获取信用（需保证界面在主页）
 【5】完成公开招募领取干员（需保证界面在主页）
+【6】跳过弹窗
+【7】周一批量刷剿灭脚本
 【88】退出,也可直接右上角关闭
 """
+
+
 
 while True:
     print(print_info)
@@ -39,7 +69,8 @@ while True:
         print("请输入正确的选项！！请重新输入！")
         continue
     if "0" == opear:
-        TestCase.start_game()
+        print("===222======",dev.cap_method)
+        TestCase.StartGame()
     if "1" == opear:
         print("请输入刷图次数：")
         cnt = input("")
@@ -54,3 +85,14 @@ while True:
         TestCase.CreditAccess()
     if "5" == opear:
         TestCase.CompleteOpenRecruitment()
+    if "6" == opear:
+        TestCase.SkipPopup()
+    if "7" == opear:
+        #切换Yosemite输入法
+        dev.shell("ime enable com.netease.nie.yosemite/.ime.ImeService")
+        dev.shell("ime set com.netease.nie.yosemite/.ime.ImeService")
+        TestCase.MondayAutoFight()
+        #切换Sogou输入法
+        dev.shell("ime enable com.sohu.inputmethod.sogouoem/.SogouIME")
+        dev.shell("ime set com.sohu.inputmethod.sogouoem/.SogouIME")
+        

@@ -8,6 +8,61 @@ auto_setup(__file__)
 
 timeout=6000
 
+def OpenGame():
+    start_app("com.hypergryph.arknights")
+    wait(Template(r"tpl1594892913227.png", record_pos=(-0.003, 0.205), resolution=(2280, 1080)),timeout)
+    touch(Template(r"tpl1594892913227.png", record_pos=(-0.003, 0.205), resolution=(2280, 1080)))
+    wait(Template(r"tpl1594892983839.png", record_pos=(-0.002, 0.098), resolution=(2280, 1080)),timeout)
+    
+def StartGame():
+    OpenGame()
+    touch(Template(r"tpl1594892983839.png", record_pos=(-0.002, 0.098), resolution=(2280, 1080)))
+    
+def SwitchAccount(acc,pw):
+    wait(Template(r"tpl1597051076287.png", record_pos=(0.228, 0.209), resolution=(2280, 1080)))
+    touch(Template(r"tpl1597051076287.png", record_pos=(0.228, 0.209), resolution=(2280, 1080)))
+    touch(Template(r"tpl1597051100791.png", record_pos=(-0.15, 0.095), resolution=(2280, 1080)))
+    touch(Template(r"tpl1597051155115.png", target_pos=2, record_pos=(-0.002, 0.103), resolution=(2280, 1080)))
+    text(acc)
+    touch(Template(r"tpl1597051341386.png", record_pos=(0.431, 0.173), resolution=(2280, 1080)))
+    touch(Template(r"tpl1597058496136.png", target_pos=2, record_pos=(-0.003, 0.122), resolution=(2280, 1080)))
+    text(pw)
+    touch(Template(r"tpl1597051341386.png", record_pos=(0.431, 0.173), resolution=(2280, 1080)))
+    touch(Template(r"tpl1597058629464.png", record_pos=(-0.004, 0.142), resolution=(2280, 1080)))
+
+def ExitAccount():
+    wait(Template(r"tpl1597830778910.png", record_pos=(-0.462, -0.249), resolution=(1440, 810)))
+    touch(Template(r"tpl1597830778910.png", record_pos=(-0.462, -0.249), resolution=(1440, 810)))
+    wait(Template(r"tpl1597831549685.png", record_pos=(-0.022, 0.124), resolution=(1440, 810)))
+    touch(Template(r"tpl1597831549685.png", record_pos=(-0.022, 0.124), resolution=(1440, 810)))
+    wait(Template(r"tpl1597831642627.png", record_pos=(0.157, 0.115), resolution=(1440, 810)))
+    touch(Template(r"tpl1597831642627.png", record_pos=(0.157, 0.115), resolution=(1440, 810)))
+
+
+#跳过弹窗
+def SkipPopup():
+    while exists(Template(r"tpl1597111964503.png", record_pos=(0.387, -0.198), resolution=(2280, 1080))):
+        while exists(Template(r"tpl1597112104130.png", record_pos=(0.001, -0.165), resolution=(2280, 1080))):
+            touch(Template(r"tpl1597112104130.png", record_pos=(0.001, -0.165), resolution=(2280, 1080)))
+        touch(Template(r"tpl1597111964503.png", record_pos=(0.387, -0.198), resolution=(2280, 1080)))
+        sleep(3)
+
+def GoToModel4():
+    wait(Template(r"tpl1597817524014.png", record_pos=(0.26, -0.155), resolution=(1440, 810)))
+    touch(Template(r"tpl1597817524014.png", record_pos=(0.26, -0.155), resolution=(1440, 810)))
+    wait(Template(r"tpl1597829139201.png", record_pos=(-0.079, 0.237), resolution=(1440, 810)))
+    touch(Template(r"tpl1597829139201.png", record_pos=(-0.079, 0.237), resolution=(1440, 810)))
+    wait(Template(r"tpl1597829672306.png", record_pos=(0.339, -0.035), resolution=(1440, 810)))
+    touch(Template(r"tpl1597829672306.png", record_pos=(0.339, -0.035), resolution=(1440, 810)))
+    if exists(Template(r"tpl1597829812232.png", record_pos=(0.332, 0.181), resolution=(1440, 810))):
+        touch(Template(r"tpl1597829812232.png", record_pos=(0.332, 0.181), resolution=(1440, 810)))
+
+def GoToHome()
+    wait(Template(r"tpl1595558180220.png", record_pos=(-0.247, -0.209), resolution=(2280, 1080)))
+    touch(Template(r"tpl1595558180220.png", record_pos=(-0.247, -0.209), resolution=(2280, 1080)))
+    wait(Template(r"tpl1597830727571.png", record_pos=(-0.428, -0.078), resolution=(1440, 810)))
+    touch(Template(r"tpl1597830727571.png", record_pos=(-0.428, -0.078), resolution=(1440, 810)))
+    
 #单关卡循环刷图+自动吃药
 def AutoFight(cnt,model=1):
     for i in range(cnt):
@@ -75,13 +130,6 @@ def CreditAccess():
         if exists(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080))):
             touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
     #剩下的手动购买
-    
-def start_game():
-    start_app("com.hypergryph.arknights")
-    wait(Template(r"tpl1594892913227.png", record_pos=(-0.003, 0.205), resolution=(2280, 1080)),timeout)
-    touch(Template(r"tpl1594892913227.png", record_pos=(-0.003, 0.205), resolution=(2280, 1080)))
-    wait(Template(r"tpl1594892983839.png", record_pos=(-0.002, 0.098), resolution=(2280, 1080)),timeout)
-    touch(Template(r"tpl1594892983839.png", record_pos=(-0.002, 0.098), resolution=(2280, 1080)))
 
 #完成公开招募领取干员
 def CompleteOpenRecruitment():
@@ -92,13 +140,32 @@ def CompleteOpenRecruitment():
             touch(Template(r"tpl1596594437987.png", record_pos=(-0.207, 0.014), resolution=(2280, 1080)))
             wait(Template(r"tpl1596594512366.png", record_pos=(0.426, -0.208), resolution=(2280, 1080)))
             touch(Template(r"tpl1596594512366.png", record_pos=(0.426, -0.208), resolution=(2280, 1080)))
+            sleep(2)
             touch(Template(r"tpl1596594609163.png", record_pos=(0.219, 0.056), resolution=(2280, 1080)))
 
-
-
-
-        
-
-
-
-
+    
+#周一挂机剿灭5次
+def MondayAutoFight():
+    OpenGame()
+    #读取配置      
+    f = open('../acc.txt')
+    a = f.read()
+    f.close()
+    a = a.split('"')
+    b = []
+    for i in range(len(a)):
+        if i % 2 != 0:
+            b.append(a[i])
+    #进入循环
+    for i in range(len(b)):
+        if i % 2 != 0:
+            acc = b[i-1]
+            pw = b[i]
+            SwitchAccount(acc,pw)
+            sleep(20)
+            SkipPopup()
+            GoToModel4()
+            AutoFight(5,4)
+            GoToHome()
+            ExitAccount()
+    

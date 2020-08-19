@@ -1,13 +1,13 @@
 # ArknightsAutoTest
-明日方舟护肝小助手
-基于Airtest实现
+明日方舟护肝小助手  
+基于Airtest实现  
 具体操作见ArknightsAutoTest教程
 # 更新日志
 ##### 2020-8-19
 1. 增加针对miui11以上出现minicap server setup timeout问题的特殊处理
 2. 增加官方模拟器网易mumu的支持
-3. 增加一键挂机剿灭功能（需添加数据配置）
-	在上级目录添加`acc.txt`文件
+3. 增加一键挂机剿灭功能（需添加数据配置）  
+	在上级目录添加`acc.txt`文件  
 	文件内格式为`"账号":"密码",#用户`
 
 ##### 2020-8-10

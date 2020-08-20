@@ -3,6 +3,9 @@
 基于Airtest实现  
 具体操作见ArknightsAutoTest教程
 # 更新日志
+##### 2020-8-20
+1. 增加不同手机对minicap和javacap的兼容处理
+
 ##### 2020-8-19
 1. 增加针对miui11以上出现minicap server setup timeout问题的特殊处理
 2. 增加官方模拟器网易mumu的支持

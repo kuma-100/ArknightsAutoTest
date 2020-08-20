@@ -57,7 +57,7 @@ def GoToModel4():
     if exists(Template(r"tpl1597829812232.png", record_pos=(0.332, 0.181), resolution=(1440, 810))):
         touch(Template(r"tpl1597829812232.png", record_pos=(0.332, 0.181), resolution=(1440, 810)))
 
-def GoToHome()
+def GoToHome():
     wait(Template(r"tpl1595558180220.png", record_pos=(-0.247, -0.209), resolution=(2280, 1080)))
     touch(Template(r"tpl1595558180220.png", record_pos=(-0.247, -0.209), resolution=(2280, 1080)))
     wait(Template(r"tpl1597830727571.png", record_pos=(-0.428, -0.078), resolution=(1440, 810)))

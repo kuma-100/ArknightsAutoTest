@@ -9,8 +9,8 @@ import TestCase
 
 #优先连接手机，其次连接模拟器（目前仅支持网易mumu）
 try:
-#     dev = connect_device("Android:///")
-    dev = connect_device("Android:///?cap_method=JAVACAP")
+    dev = connect_device("Android:///")
+#     dev = connect_device("Android:///?cap_method=JAVACAP")
 except:
     dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:7555?cap_method=JAVACAP^&^&ori_method=ADBORI")
 
@@ -20,15 +20,14 @@ except:
 #     print("====",dev.minicap.get_stream())
 #     del dev
 #     dev = connect_device("Android:///?cap_method=JAVACAP")
+#     G.add_device(dev)
 #     print(dev.cap_method)
 # 针对minicap
-# try:
-#     dev.minicap.get_stream()
-# except:
-#     del dev
-#     dev = connect_device("Android:///?cap_method=JAVACAP")
-# #     dev.set_current(1)
-#     print("=========",dev.cap_method)
+try:
+    dev.minicap.get_stream()
+except:
+    dev = connect_device("Android:///?cap_method=JAVACAP")
+    G.add_device(dev)
 
     
 auto_setup(__file__)

@@ -45,11 +45,12 @@ def ExitAccount():
 
 # 跳过弹窗
 def SkipPopup():
-    while exists(Template(r"tpl1597111964503.png", record_pos=(0.387, -0.198), resolution=(2280, 1080))):
-        while exists(Template(r"tpl1597112104130.png", record_pos=(0.001, -0.165), resolution=(2280, 1080))):
-            touch(Template(r"tpl1597112104130.png", record_pos=(0.001, -0.165), resolution=(2280, 1080)))
-        touch(Template(r"tpl1597111964503.png", record_pos=(0.387, -0.198), resolution=(2280, 1080)))
-        sleep(3)
+    while exists(Template(r"tpl1597111964503.png", record_pos=(0.387, -0.198), resolution=(2280, 1080))) or exists(Template(r"tpl1597112104130.png", record_pos=(0.001, -0.165), resolution=(2280, 1080))):
+        if exists(Template(r"tpl1597111964503.png", record_pos=(0.387, -0.198), resolution=(2280, 1080))):
+            touch(Template(r"tpl1597111964503.png", record_pos=(0.001, -0.165), resolution=(2280, 1080)))
+        elif exists(Template(r"tpl1597112104130.png", record_pos=(0.001, -0.165), resolution=(2280, 1080))):
+            touch(Template(r"tpl1597112104130.png", record_pos=(0.387, -0.198), resolution=(2280, 1080)))
+        sleep(5)
 
 
 def GoToModel4():
@@ -159,20 +160,20 @@ def MondayAutoFight():
     OpenGame()
     # 读取配置
     f = open('../acc.txt')
-    a = f.read()
+    sAccConf = f.read()
     f.close()
-    a = a.split('"')
-    b = []
-    for i in range(len(a)):
+    sAccConf = sAccConf.split('"')
+    lAccConf = []
+    for i in range(len(sAccConf)):
         if i % 2 != 0:
-            b.append(a[i])
+            lAccConf.append(sAccConf[i])
     # 进入循环
     for i in range(len(b)):
         if i % 2 != 0:
-            acc = b[i-1]
-            pw = b[i]
+            acc = lAccConf[i-1]
+            pw = lAccConf[i]
             SwitchAccount(acc,pw)
-            sleep(20)
+            sleep(40)
             SkipPopup()
             GoToModel4()
             AutoFight(5,4)

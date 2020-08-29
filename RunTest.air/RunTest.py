@@ -31,6 +31,7 @@ OPEAR_CONF = {
     "5": "完成公开招募领取干员（需保证界面在主页）",
     "6": "跳过弹窗",
     "7": "周一批量刷剿灭脚本",
+    "8": "灰蕈迷境刷蜜饼",
 }
 
 PRINT_INFO = """
@@ -44,6 +45,7 @@ PRINT_INFO = """
 【5】完成公开招募领取干员（需保证界面在主页）
 【6】跳过弹窗
 【7】周一批量刷剿灭脚本
+【8】灰蕈迷境刷蜜饼（需保证界面在活动界面）
 【88】退出,也可直接右上角关闭
 """
 
@@ -81,3 +83,7 @@ while True:
         # 切换Sogou输入法
         dev.shell("ime enable com.sohu.inputmethod.sogouoem/.SogouIME")
         dev.shell("ime set com.sohu.inputmethod.sogouoem/.SogouIME")
+    if "8" == opear:
+        print("请输入刷图次数：")
+        cnt = input("")
+        TestCase.FungiMist(int(cnt))

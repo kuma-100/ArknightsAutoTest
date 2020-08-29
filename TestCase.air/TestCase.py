@@ -179,3 +179,61 @@ def MondayAutoFight():
             AutoFight(5,4)
             GoToHome()
             ExitAccount()
+
+# 灰蕈迷境刷蜜饼
+def FungiMist(cnt):
+    for i in range(cnt):
+        touch(Template(r"tpl1598676865935.png", record_pos=(0.308, -0.124), resolution=(2400, 1080)))
+        touch(Template(r"tpl1598676886702.png", record_pos=(-0.398, 0.025), resolution=(2400, 1080)))
+        sleep(1)
+        touch(Template(r"tpl1598676906075.png", threshold=0.9, record_pos=(-0.401, 0.184), resolution=(2400, 1080)))
+        while exists(Template(r"tpl1598676949030.png", record_pos=(-0.211, 0.109), resolution=(2400, 1080))):
+            touch(Template(r"tpl1598676949030.png", record_pos=(-0.211, 0.109), resolution=(2400, 1080)))
+            touch(Template(r"tpl1598676980816.png", target_pos=9, record_pos=(-0.344, -0.177), resolution=(2400, 1080)))
+            touch(Template(r"tpl1598677009402.png", record_pos=(0.434, 0.193), resolution=(2400, 1080)))
+            sleep(5)
+            touch(Template(r"tpl1596594609163.png", record_pos=(0.219, 0.056), resolution=(2280, 1080)))
+            sleep(2)
+        touch(Template(r"tpl1598677165857.png", record_pos=(0.001, 0.022), resolution=(2400, 1080)))
+        wait(Template(r"tpl1598677185373.png", record_pos=(-0.146, -0.031), resolution=(2400, 1080)))
+        touch(Template(r"tpl1598677185373.png", record_pos=(-0.146, -0.031), resolution=(2400, 1080)))
+        touch(Template(r"tpl1598677203714.png", record_pos=(0.43, 0.058), resolution=(2400, 1080)))
+        touch(Template(r"tpl1598677214926.png", record_pos=(0.386, 0.189), resolution=(2400, 1080)))
+        touch(Template(r"tpl1598677224290.png", threshold=0.9, record_pos=(0.174, 0.09), resolution=(2400, 1080)))
+        wait(Template(r"tpl1598677242685.png", threshold=0.9, record_pos=(-0.449, -0.193), resolution=(2400, 1080)))
+        touch(Template(r"tpl1598677242685.png", record_pos=(-0.449, -0.193), resolution=(2400, 1080)))
+        touch(Template(r"tpl1598677265806.png", record_pos=(0.077, -0.007), resolution=(2400, 1080)))
+        sleep(1)
+        touch(Template(r"tpl1598677278150.png", threshold=0.9, record_pos=(0.177, 0.09), resolution=(2400, 1080)))
+        touch(Template(r"tpl1598677290047.png", record_pos=(-0.33, -0.001), resolution=(2400, 1080)))
+        sleep(5)
+        wait(Template(r"tpl1598685863593.png", record_pos=(-0.354, -0.062), resolution=(1440, 810)))
+        touch(Template(r"tpl1598677314013.png", record_pos=(-0.002, -0.192), resolution=(2400, 1080)))
+        wait(Template(r"tpl1598677376528.png", record_pos=(-0.001, 0.19), resolution=(2400, 1080)))
+        touch(Template(r"tpl1598677376528.png", record_pos=(-0.001, 0.19), resolution=(2400, 1080)))
+        wait(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
+        touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
+        if exists(Template(r"tpl1598682578919.png", record_pos=(-0.003, -0.221), resolution=(1440, 810))):
+            touch(Template(r"tpl1598677376528.png", record_pos=(-0.001, 0.19), resolution=(2400, 1080)))
+            wait(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
+            touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

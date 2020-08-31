@@ -168,7 +168,7 @@ def MondayAutoFight():
         if i % 2 != 0:
             lAccConf.append(sAccConf[i])
     # 进入循环
-    for i in range(len(b)):
+    for i in range(len(lAccConf)):
         if i % 2 != 0:
             acc = lAccConf[i-1]
             pw = lAccConf[i]
@@ -217,23 +217,4 @@ def FungiMist(cnt):
             touch(Template(r"tpl1598677376528.png", record_pos=(-0.001, 0.19), resolution=(2400, 1080)))
             wait(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
             touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

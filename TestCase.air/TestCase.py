@@ -45,7 +45,7 @@ def ExitAccount():
 
 # 跳过弹窗
 def SkipPopup():
-    while exists(Template(r"tpl1597111964503.png", record_pos=(0.387, -0.198), resolution=(2280, 1080))) or exists(Template(r"tpl1597112104130.png", record_pos=(0.001, -0.165), resolution=(2280, 1080))):
+    while exists(Template(r"tpl1597111964503.png", threshold=0.9, record_pos=(0.387, -0.198), resolution=(2280, 1080))) or exists(Template(r"tpl1597112104130.png", threshold=0.9, record_pos=(0.001, -0.165), resolution=(2280, 1080))):
         if exists(Template(r"tpl1597111964503.png", record_pos=(0.387, -0.198), resolution=(2280, 1080))):
             touch(Template(r"tpl1597111964503.png", record_pos=(0.001, -0.165), resolution=(2280, 1080)))
         elif exists(Template(r"tpl1597112104130.png", record_pos=(0.001, -0.165), resolution=(2280, 1080))):
@@ -76,7 +76,7 @@ def AutoFight(cnt,model=1):
     for i in range(cnt):
         wait(Template(r"tpl1594345130612.png", threshold=0.9, record_pos=(0.394, 0.19), resolution=(2280, 1080)))
         touch(Template(r"tpl1594345130612.png", threshold=0.9, record_pos=(0.394, 0.19), resolution=(2280, 1080)))
-
+        sleep(3)
         if exists(Template(r"tpl1594288024016.png",threshold=0.8, record_pos=(-0.33, -0.061), resolution=(2280, 1080))):
             touch(Template(r"tpl1594288083324.png", record_pos=(0.29, 0.141), resolution=(2280, 1080)))
             wait(Template(r"tpl1594345130612.png", threshold=0.9, record_pos=(0.394, 0.19), resolution=(2280, 1080)))
@@ -187,12 +187,12 @@ def FungiMist(cnt):
         touch(Template(r"tpl1598676886702.png", record_pos=(-0.398, 0.025), resolution=(2400, 1080)))
         sleep(1)
         touch(Template(r"tpl1598676906075.png", threshold=0.9, record_pos=(-0.401, 0.184), resolution=(2400, 1080)))
-        wait(Template(r"tpl1598676949030.png", record_pos=(-0.211, 0.109), resolution=(2400, 1080)))
-        while exists(Template(r"tpl1598676949030.png", record_pos=(-0.211, 0.109), resolution=(2400, 1080))):
-            touch(Template(r"tpl1598676949030.png", record_pos=(-0.211, 0.109), resolution=(2400, 1080)))
+        wait(Template(r"tpl1598676949030.png", threshold=0.9, record_pos=(-0.211, 0.109), resolution=(2400, 1080)))
+        while exists(Template(r"tpl1598676949030.png", threshold=0.9, record_pos=(-0.211, 0.109), resolution=(2400, 1080))):
+            touch(Template(r"tpl1598676949030.png", threshold=0.9, record_pos=(-0.211, 0.109), resolution=(2400, 1080)))
             touch(Template(r"tpl1599135164536.png", target_pos=9, record_pos=(-0.308, -0.22), resolution=(1440, 810)))
             touch(Template(r"tpl1598677009402.png", record_pos=(0.434, 0.193), resolution=(2400, 1080)))
-            if  exists(Template(r"tpl1599135248244.png", record_pos=(-0.011, 0.032), resolution=(1440, 810))):
+            if  exists(Template(r"tpl1599135248244.png", threshold=0.9, record_pos=(-0.011, 0.032), resolution=(1440, 810))):
                 touch(Template(r"tpl1598677224290.png", threshold=0.9, record_pos=(0.174, 0.09), resolution=(2400, 1080)))
             sleep(5)
             touch(Template(r"tpl1596594609163.png", record_pos=(0.219, 0.056), resolution=(2280, 1080)))

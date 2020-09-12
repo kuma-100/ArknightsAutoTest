@@ -73,6 +73,8 @@ def GoToHome():
 
 # 单关卡循环刷图+自动吃药
 def AutoFight(cnt,model=1):
+    if exists(Template(r"tpl1597829812232.png", record_pos=(0.332, 0.181), resolution=(1440, 810))):
+        touch(Template(r"tpl1597829812232.png", record_pos=(0.332, 0.181), resolution=(1440, 810)))
     for i in range(cnt):
         wait(Template(r"tpl1594345130612.png", threshold=0.9, record_pos=(0.394, 0.19), resolution=(2280, 1080)))
         touch(Template(r"tpl1594345130612.png", threshold=0.9, record_pos=(0.394, 0.19), resolution=(2280, 1080)))
@@ -84,9 +86,9 @@ def AutoFight(cnt,model=1):
         touch(Template(r"tpl1594285940292.png", record_pos=(0.304, 0.096), resolution=(2280, 1080)))
         sleep(30)
         if model == 1:
-            wait(Template(r"tpl1594286088698.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)),timeout)
+            wait(Template(r"tpl1594286088698.png", threshold=0.9, record_pos=(-0.317, 0.175), resolution=(2280, 1080)),timeout)
             sleep(2)
-            touch(Template(r"tpl1594286088698.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
+            touch(Template(r"tpl1594286088698.png", threshold=0.9, record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
         if model == 4:
             wait(Template(r"tpl1594605537877.png", threshold=0.9, record_pos=(0.201, -0.003), resolution=(2280, 1080)),timeout)
             touch(Template(r"tpl1594605537877.png", record_pos=(0.201, -0.003), resolution=(2280, 1080)))
@@ -215,7 +217,7 @@ def FungiMist(cnt):
         touch(Template(r"tpl1598677376528.png", record_pos=(-0.001, 0.19), resolution=(2400, 1080)))
         wait(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
         touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
-        if exists(Template(r"tpl1598682578919.png", record_pos=(-0.003, -0.221), resolution=(1440, 810))):
+        if exists(Template(r"tpl1598682578919.png", threshold=0.9, record_pos=(-0.003, -0.221), resolution=(1440, 810))):
             touch(Template(r"tpl1598677376528.png", record_pos=(-0.001, 0.19), resolution=(2400, 1080)))
             wait(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
             touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))

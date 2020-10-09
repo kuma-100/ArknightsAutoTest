@@ -79,6 +79,7 @@ while True:
         # 切换Yosemite输入法
         dev.shell("ime enable com.netease.nie.yosemite/.ime.ImeService")
         dev.shell("ime set com.netease.nie.yosemite/.ime.ImeService")
+        #执行脚本
         TestCase.MondayAutoFight()
         # 切换Sogou输入法
         dev.shell("ime enable com.sohu.inputmethod.sogouoem/.SogouIME")

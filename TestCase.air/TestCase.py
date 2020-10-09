@@ -163,7 +163,7 @@ def CompleteOpenRecruitment():
 def MondayAutoFight():
     OpenGame()
     # 读取配置
-    f = open('../acc.txt')
+    f = open('./acc.txt')
     sAccConf = f.read()
     f.close()
     sAccConf = sAccConf.split('"')

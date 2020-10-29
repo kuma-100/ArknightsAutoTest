@@ -96,6 +96,8 @@ def AutoFight(cnt,model=1):
             touch(Template(r"tpl1594605537877.png", record_pos=(0.201, -0.003), resolution=(2280, 1080)))
             wait(Template(r"tpl1594286088698.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
             sleep(2)
+            if exists(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080))):
+                touch(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080)))
             touch(Template(r"tpl1594286088698.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
 
 # 点击领取任务奖励

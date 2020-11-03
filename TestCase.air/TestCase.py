@@ -58,8 +58,20 @@ def GoToModel4():
     touch(Template(r"tpl1597817524014.png", record_pos=(0.26, -0.155), resolution=(1440, 810)))
     wait(Template(r"tpl1597829139201.png", record_pos=(-0.079, 0.237), resolution=(1440, 810)))
     touch(Template(r"tpl1597829139201.png", record_pos=(-0.079, 0.237), resolution=(1440, 810)))
+    sleep(5)
+    if  exists(Template(r"tpl1604300690305.png", record_pos=(-0.38, -0.197), resolution=(1440, 810))):
+        touch(Template(r"tpl1604300690305.png", record_pos=(-0.38, -0.197), resolution=(1440, 810)))
+    wait(Template(r"tpl1604301453402.png", record_pos=(-0.453, 0.224), resolution=(1440, 810)))
+    touch(Template(r"tpl1604301453402.png", record_pos=(-0.453, 0.224), resolution=(1440, 810)))
+    wait(Template(r"tpl1604301514105.png", record_pos=(0.365, -0.1), resolution=(1440, 810)))
+    touch(Template(r"tpl1604301514105.png", record_pos=(0.365, -0.1), resolution=(1440, 810)))
+    sleep(3)
+    keyevent("BACK")
+    wait(Template(r"tpl1604299152778.png", record_pos=(0.407, 0.198), resolution=(2400, 1080)))
+    touch(Template(r"tpl1604299152778.png", record_pos=(0.407, 0.198), resolution=(2400, 1080)))
+    wait(Template(r"tpl1604299238209.png", threshold=0.9, record_pos=(0.301, 0.011), resolution=(2400, 1080)))
+    touch(Template(r"tpl1604299238209.png", threshold=0.9, record_pos=(0.301, 0.011), resolution=(2400, 1080)))
     wait(Template(r"tpl1597829672306.png", record_pos=(0.339, -0.035), resolution=(1440, 810)))
-    touch(Template(r"tpl1597829672306.png", record_pos=(0.339, -0.035), resolution=(1440, 810)))
     if exists(Template(r"tpl1597829812232.png", record_pos=(0.332, 0.181), resolution=(1440, 810))):
         touch(Template(r"tpl1597829812232.png", record_pos=(0.332, 0.181), resolution=(1440, 810)))
 
@@ -92,8 +104,8 @@ def AutoFight(cnt,model=1):
                 touch(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080)))
             touch(Template(r"tpl1594286088698.png", threshold=0.9, record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
         if model == 4:
-            wait(Template(r"tpl1594605537877.png", threshold=0.9, record_pos=(0.201, -0.003), resolution=(2280, 1080)),timeout)
-            touch(Template(r"tpl1594605537877.png", record_pos=(0.201, -0.003), resolution=(2280, 1080)))
+            wait(Template(r"tpl1604310613142.png", threshold=0.9, record_pos=(0.201, -0.003), resolution=(2280, 1080)),timeout)
+            touch(Template(r"tpl1604310613142.png", threshold=0.9, record_pos=(0.238, -0.003), resolution=(1440, 810)))
             wait(Template(r"tpl1594286088698.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
             sleep(2)
             if exists(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080))):

@@ -30,8 +30,9 @@ OPEAR_CONF = {
     "4": "自动获取信用（需保证界面在主页）",
     "5": "完成公开招募领取干员（需保证界面在主页）",
     "6": "跳过弹窗",
-    "7": "周一批量刷剿灭脚本",
-    "8": "灰蕈迷境刷蜜饼",
+    "7": "周一批量刷剿灭脚本（老图龙门市区）",
+    "8": "周一批量刷剿灭脚本（新图轮换）",
+    "001": "灰蕈迷境刷蜜饼",
 }
 
 PRINT_INFO = """
@@ -44,9 +45,11 @@ PRINT_INFO = """
 【4】自动获取信用（需保证界面在主页）
 【5】完成公开招募领取干员（需保证界面在主页）
 【6】跳过弹窗
-【7】周一批量刷剿灭脚本
-【8】灰蕈迷境刷蜜饼（需保证界面在活动界面）
+【7】周一批量刷剿灭脚本（老图龙门市区）(剩100玉）
+【8】周一批量刷剿灭脚本（新图轮换）
 【88】退出,也可直接右上角关闭
+-----------------限时活动-----------------
+【001】灰蕈迷境刷蜜饼（需保证界面在活动界面）
 """
 
 while True:
@@ -76,15 +79,10 @@ while True:
     if "6" == opear:
         TestCase.SkipPopup()
     if "7" == opear:
-        # 切换Yosemite输入法
-        dev.shell("ime enable com.netease.nie.yosemite/.ime.ImeService")
-        dev.shell("ime set com.netease.nie.yosemite/.ime.ImeService")
-        #执行脚本
-        TestCase.MondayAutoFight()
-        # 切换Sogou输入法
-        dev.shell("ime enable com.sohu.inputmethod.sogouoem/.SogouIME")
-        dev.shell("ime set com.sohu.inputmethod.sogouoem/.SogouIME")
+        TestCase.MondayAutoFight(0)
     if "8" == opear:
+        TestCase.MondayAutoFight(1)
+    if "001" == opear:
         print("请输入刷图次数：")
         cnt = input("")
         TestCase.FungiMist(int(cnt))

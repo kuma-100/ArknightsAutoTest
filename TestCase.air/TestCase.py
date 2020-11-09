@@ -37,6 +37,13 @@ def SwitchAccount(acc,pw):
 def ExitAccount():
     wait(Template(r"tpl1597830778910.png", record_pos=(-0.462, -0.249), resolution=(1440, 810)))
     touch(Template(r"tpl1597830778910.png", record_pos=(-0.462, -0.249), resolution=(1440, 810)))
+    sleep(3)
+    # 获取设备的高度和宽度
+    width, height = device().get_current_resolution()
+    # 校准滑动的起点和终点
+    start_pt = (width * 0.5, height / 1.2)
+    end_pt = (width * 0.5, height / 3)
+    swipe(start_pt,end_pt)
     wait(Template(r"tpl1597831549685.png", record_pos=(-0.022, 0.124), resolution=(1440, 810)))
     touch(Template(r"tpl1597831549685.png", record_pos=(-0.022, 0.124), resolution=(1440, 810)))
     wait(Template(r"tpl1597831642627.png", record_pos=(0.157, 0.115), resolution=(1440, 810)))
@@ -53,7 +60,7 @@ def SkipPopup():
         sleep(5)
 
 
-def GoToModel4():
+def GoToModel4(model):
     wait(Template(r"tpl1597817524014.png", record_pos=(0.26, -0.155), resolution=(1440, 810)))
     touch(Template(r"tpl1597817524014.png", record_pos=(0.26, -0.155), resolution=(1440, 810)))
     wait(Template(r"tpl1597829139201.png", record_pos=(-0.079, 0.237), resolution=(1440, 810)))
@@ -66,14 +73,15 @@ def GoToModel4():
     wait(Template(r"tpl1604301514105.png", record_pos=(0.365, -0.1), resolution=(1440, 810)))
     touch(Template(r"tpl1604301514105.png", record_pos=(0.365, -0.1), resolution=(1440, 810)))
     sleep(3)
-    keyevent("BACK")
-    wait(Template(r"tpl1604299152778.png", record_pos=(0.407, 0.198), resolution=(2400, 1080)))
-    touch(Template(r"tpl1604299152778.png", record_pos=(0.407, 0.198), resolution=(2400, 1080)))
-    wait(Template(r"tpl1604299238209.png", threshold=0.9, record_pos=(0.301, 0.011), resolution=(2400, 1080)))
-    touch(Template(r"tpl1604299238209.png", threshold=0.9, record_pos=(0.301, 0.011), resolution=(2400, 1080)))
-    wait(Template(r"tpl1597829672306.png", record_pos=(0.339, -0.035), resolution=(1440, 810)))
-    if exists(Template(r"tpl1597829812232.png", record_pos=(0.332, 0.181), resolution=(1440, 810))):
-        touch(Template(r"tpl1597829812232.png", record_pos=(0.332, 0.181), resolution=(1440, 810)))
+    if model == 1:
+        pass
+    else:
+        keyevent("BACK")
+        wait(Template(r"tpl1604299152778.png", record_pos=(0.407, 0.198), resolution=(2400, 1080)))
+        touch(Template(r"tpl1604299152778.png", record_pos=(0.407, 0.198), resolution=(2400, 1080)))
+        wait(Template(r"tpl1604299238209.png", threshold=0.9, record_pos=(0.301, 0.011), resolution=(2400, 1080)))
+        touch(Template(r"tpl1604299238209.png", threshold=0.9, record_pos=(0.301, 0.011), resolution=(2400, 1080)))
+        wait(Template(r"tpl1597829672306.png", record_pos=(0.339, -0.035), resolution=(1440, 810)))
 
 
 def GoToHome():
@@ -174,7 +182,10 @@ def CompleteOpenRecruitment():
 
 
 # 周一挂机剿灭5次
-def MondayAutoFight():
+def MondayAutoFight(model):
+    # 切换Yosemite输入法
+#     dev.shell("ime enable com.netease.nie.yosemite/.ime.ImeService")
+#     dev.shell("ime set com.netease.nie.yosemite/.ime.ImeService")
     OpenGame()
     # 读取配置
     f = open('./acc.txt')
@@ -193,11 +204,13 @@ def MondayAutoFight():
             SwitchAccount(acc,pw)
             sleep(40)
             SkipPopup()
-            GoToModel4()
+            GoToModel4(model)
             AutoFight(5,4)
             GoToHome()
             ExitAccount()
-
+    # 切换Sogou输入法
+#     dev.shell("ime enable com.sohu.inputmethod.sogouoem/.SogouIME")
+#     dev.shell("ime set com.sohu.inputmethod.sogouoem/.SogouIME")
 # 灰蕈迷境刷蜜饼
 def FungiMist(cnt):
     for i in range(cnt):

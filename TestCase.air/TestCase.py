@@ -112,8 +112,8 @@ def AutoFight(cnt,model=1):
                 touch(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080)))
             touch(Template(r"tpl1594286088698.png", threshold=0.9, record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
         if model == 4:
-            wait(Template(r"tpl1604310613142.png", threshold=0.9, record_pos=(0.201, -0.003), resolution=(2280, 1080)),timeout)
-            touch(Template(r"tpl1604310613142.png", threshold=0.9, record_pos=(0.238, -0.003), resolution=(1440, 810)))
+            wait(Template(r"tpl1604310613142.png", threshold=0.8, record_pos=(0.201, -0.003), resolution=(2280, 1080)),timeout)
+            touch(Template(r"tpl1604310613142.png", threshold=0.8, record_pos=(0.238, -0.003), resolution=(1440, 810)))
             wait(Template(r"tpl1594286088698.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
             sleep(2)
             if exists(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080))):

@@ -37,15 +37,14 @@ def SwitchAccount(acc,pw):
 def ExitAccount():
     wait(Template(r"tpl1597830778910.png", record_pos=(-0.462, -0.249), resolution=(1440, 810)))
     touch(Template(r"tpl1597830778910.png", record_pos=(-0.462, -0.249), resolution=(1440, 810)))
-    sleep(3)
-    # 获取设备的高度和宽度
-    width, height = device().get_current_resolution()
-    # 校准滑动的起点和终点
-    start_pt = (width * 0.5, height / 1.2)
-    end_pt = (width * 0.5, height / 3)
-    swipe(start_pt,end_pt)
-    wait(Template(r"tpl1597831549685.png", record_pos=(-0.022, 0.124), resolution=(1440, 810)))
-    touch(Template(r"tpl1597831549685.png", record_pos=(-0.022, 0.124), resolution=(1440, 810)))
+#     # 获取设备的高度和宽度
+#     width, height = device().get_current_resolution()
+#     # 校准滑动的起点和终点
+#     start_pt = (width * 0.5, height / 1.2)
+#     end_pt = (width * 0.5, height / 3)
+#     swipe(start_pt,end_pt)
+    wait(Template(r"tpl1608612534645.png", record_pos=(0.138, -0.088), resolution=(2400, 1080)))
+    touch(Template(r"tpl1608612534645.png", record_pos=(0.138, -0.088), resolution=(2400, 1080)))
     wait(Template(r"tpl1597831642627.png", record_pos=(0.157, 0.115), resolution=(1440, 810)))
     touch(Template(r"tpl1597831642627.png", record_pos=(0.157, 0.115), resolution=(1440, 810)))
 

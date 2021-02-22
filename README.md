@@ -1,6 +1,6 @@
 # ArknightsAutoTest
 明日方舟护肝小助手  
-基于Airtest实现  
+基于Airtest实现  AirtestIDE-win-1.2.5
 具体操作见ArknightsAutoTest教程
 # 更新日志
 ##### 2020-11-9

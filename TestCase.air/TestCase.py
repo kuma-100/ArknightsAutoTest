@@ -51,7 +51,7 @@ def ExitAccount():
 
 # 跳过弹窗
 def SkipPopup():
-    while exists(Template(r"tpl1597111964503.png", threshold=0.9, record_pos=(0.387, -0.198), resolution=(2280, 1080))) or exists(Template(r"tpl1597112104130.png", threshold=0.9, record_pos=(0.001, -0.165), resolution=(2280, 1080))):
+    while exists(Template(r"tpl1597111964503.png", threshold=0.7, record_pos=(0.387, -0.198), resolution=(2280, 1080))) or exists(Template(r"tpl1597112104130.png", threshold=0.9, record_pos=(0.001, -0.165), resolution=(2280, 1080))):
         if exists(Template(r"tpl1597111964503.png", record_pos=(0.387, -0.198), resolution=(2280, 1080))):
             touch(Template(r"tpl1597111964503.png", record_pos=(0.001, -0.165), resolution=(2280, 1080)))
         elif exists(Template(r"tpl1597112104130.png", record_pos=(0.001, -0.165), resolution=(2280, 1080))):
@@ -107,6 +107,7 @@ def AutoFight(cnt,model=1):
         if model == 1:
             wait(Template(r"tpl1594286088698.png", threshold=0.9, record_pos=(-0.317, 0.175), resolution=(2280, 1080)),timeout)
             sleep(2)
+            #todo：行动结束和等级提升要放到一起等待
             if exists(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080))):
                 touch(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080)))
             touch(Template(r"tpl1594286088698.png", threshold=0.9, record_pos=(-0.317, 0.175), resolution=(2280, 1080)))

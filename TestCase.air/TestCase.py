@@ -109,6 +109,7 @@ def AutoFight(cnt,model=1):
             sleep(2)
             #todo：行动结束和等级提升要放到一起等待
             if exists(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080))):
+                sleep(5)
                 touch(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080)))
             touch(Template(r"tpl1594286088698.png", threshold=0.9, record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
         if model == 4:
@@ -118,6 +119,7 @@ def AutoFight(cnt,model=1):
             wait(Template(r"tpl1594286088698.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
             sleep(2)
             if exists(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080))):
+                sleep(5)
                 touch(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080)))
             touch(Template(r"tpl1594286088698.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
 

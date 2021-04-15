@@ -60,17 +60,16 @@ def SkipPopup():
 
 
 def GoToModel4(model):
-    wait(Template(r"tpl1597817524014.png", record_pos=(0.26, -0.155), resolution=(1440, 810)))
-    touch(Template(r"tpl1597817524014.png", record_pos=(0.26, -0.155), resolution=(1440, 810)))
-    wait(Template(r"tpl1597829139201.png", record_pos=(-0.079, 0.237), resolution=(1440, 810)))
-    touch(Template(r"tpl1597829139201.png", record_pos=(-0.079, 0.237), resolution=(1440, 810)))
+    wait(Template(r"终端.png", record_pos=(0.26, -0.155), resolution=(1440, 810)))
+    touch(Template(r"终端.png", record_pos=(0.26, -0.155), resolution=(1440, 810)))
+    wait(Template(r"每周部署.png", record_pos=(-0.079, 0.237), resolution=(1440, 810)))
+    touch(Template(r"每周部署.png", record_pos=(-0.079, 0.237), resolution=(1440, 810)))
     sleep(5)
     if  exists(Template(r"tpl1604300690305.png", record_pos=(-0.38, -0.197), resolution=(1440, 810))):
         touch(Template(r"tpl1604300690305.png", record_pos=(-0.38, -0.197), resolution=(1440, 810)))
+    wait(Template(r"当期委托.png", record_pos=(0.365, -0.1), resolution=(1440, 810)))
+    touch(Template(r"当期委托.png", record_pos=(0.365, -0.1), resolution=(1440, 810)))
     wait(Template(r"tpl1604301453402.png", record_pos=(-0.453, 0.224), resolution=(1440, 810)))
-    touch(Template(r"tpl1604301453402.png", record_pos=(-0.453, 0.224), resolution=(1440, 810)))
-    wait(Template(r"tpl1604301514105.png", record_pos=(0.365, -0.1), resolution=(1440, 810)))
-    touch(Template(r"tpl1604301514105.png", record_pos=(0.365, -0.1), resolution=(1440, 810)))
     sleep(3)
     if model == 1:
         pass
@@ -253,5 +252,10 @@ def FungiMist(cnt):
             touch(Template(r"tpl1598677376528.png", record_pos=(-0.001, 0.19), resolution=(2400, 1080)))
             wait(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
             touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
+
+
+
+
+
 
 

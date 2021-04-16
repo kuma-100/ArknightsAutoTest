@@ -213,6 +213,18 @@ def MondayAutoFight(model):
     # 切换Sogou输入法
 #     dev.shell("ime enable com.sohu.inputmethod.sogouoem/.SogouIME")
 #     dev.shell("ime set com.sohu.inputmethod.sogouoem/.SogouIME")
+
+# 启动游戏登录账号
+def login_game():
+    print("请输入账号：")
+    acc = input("")
+    print("请输入密码：")
+    pw = input("")
+    OpenGame()
+    SwitchAccount(acc,pw)
+    sleep(40)
+    SkipPopup()
+
 # 灰蕈迷境刷蜜饼
 def FungiMist(cnt):
     for i in range(cnt):
@@ -252,6 +264,7 @@ def FungiMist(cnt):
             touch(Template(r"tpl1598677376528.png", record_pos=(-0.001, 0.19), resolution=(2400, 1080)))
             wait(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
             touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
+
 
 
 

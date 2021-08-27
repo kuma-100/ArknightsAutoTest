@@ -124,8 +124,8 @@ def AutoFight(cnt,model=1):
 
 # 点击领取任务奖励
 def ReceiveTaskRewards():
-    while exists(Template(r"tpl1594297115457.png", threshold=0.9, record_pos=(0.277, -0.143), resolution=(2280, 1080))) and not exists(Template(r"tpl1594346724835.png", record_pos=(0.111, 0.068), resolution=(2280, 1080))):
-        touch(Template(r"tpl1594297115457.png", record_pos=(0.277, -0.143), resolution=(2280, 1080)))
+    while exists(Template(r"tpl1625625217664.png", record_pos=(0.374, -0.177), resolution=(1440, 810))) and not exists(Template(r"tpl1594346724835.png", record_pos=(0.111, 0.068), resolution=(2280, 1080))):
+        touch(Template(r"tpl1625625217664.png", record_pos=(0.374, -0.177), resolution=(1440, 810)))
         sleep(3)
         if exists(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080))):
             while exists(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080))):

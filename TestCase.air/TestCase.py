@@ -104,23 +104,23 @@ def AutoFight(cnt,model=1):
         touch(Template(r"tpl1594285940292.png", record_pos=(0.304, 0.096), resolution=(2280, 1080)))
         sleep(30)
         if model == 1:
-            wait(Template(r"tpl1594286088698.png", threshold=0.9, record_pos=(-0.317, 0.175), resolution=(2280, 1080)),timeout)
+            wait(Template(r"行动结束.png", threshold=0.9, record_pos=(-0.317, 0.175), resolution=(2280, 1080)),timeout)
             sleep(2)
             #todo：行动结束和等级提升要放到一起等待
             if exists(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080))):
                 sleep(5)
                 touch(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080)))
-            touch(Template(r"tpl1594286088698.png", threshold=0.9, record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
+            touch(Template(r"行动结束.png", threshold=0.9, record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
         if model == 4:
             wait(Template(r"tpl1604310613142.png", threshold=0.8, record_pos=(0.201, -0.003), resolution=(2280, 1080)),timeout)
             sleep(2)
             touch(Template(r"tpl1604310613142.png", threshold=0.8, record_pos=(0.238, -0.003), resolution=(1440, 810)))
-            wait(Template(r"tpl1594286088698.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
+            wait(Template(r"行动结束.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
             sleep(2)
             if exists(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080))):
                 sleep(5)
                 touch(Template(r"tpl1600422827146.png", record_pos=(-0.182, 0.002), resolution=(2400, 1080)))
-            touch(Template(r"tpl1594286088698.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
+            touch(Template(r"行动结束.png", record_pos=(-0.317, 0.175), resolution=(2280, 1080)))
 
 # 点击领取任务奖励
 def ReceiveTaskRewards():
@@ -209,6 +209,8 @@ def MondayAutoFight(model):
             GoToModel4(model)
             AutoFight(5,4)
             GoToHome()
+            sleep(10)
+            SkipPopup()
             ExitAccount()
     # 切换Sogou输入法
 #     dev.shell("ime enable com.sohu.inputmethod.sogouoem/.SogouIME")
@@ -264,11 +266,3 @@ def FungiMist(cnt):
             touch(Template(r"tpl1598677376528.png", record_pos=(-0.001, 0.19), resolution=(2400, 1080)))
             wait(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
             touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
-
-
-
-
-
-
-
-

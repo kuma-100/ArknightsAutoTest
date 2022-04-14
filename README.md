@@ -1,6 +1,6 @@
 # ArknightsAutoTest
 明日方舟护肝小助手  
-基于Airtest实现  AirtestIDE-win-1.2.5
+基于Airtest实现  [AirtestIDE-win-1.2.5](https://airtest.netease.com/download.html?download=win64/AirtestIDE-win-1.2.5.zip&&site=io "下载Airtest")
 具体操作见ArknightsAutoTest教程
 # 更新日志
 

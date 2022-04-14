@@ -33,6 +33,7 @@ OPEAR_CONF = {
     "6": "跳过弹窗",
     "7": "周一批量刷剿灭脚本（老图龙门市区）",
     "8": "周一批量刷剿灭脚本（新图轮换）",
+    "9": "愚人号:单关卡循环刷图（需选中关卡）",
     "001": "灰蕈迷境刷蜜饼",
 }
 
@@ -49,6 +50,7 @@ PRINT_INFO = """
 【6】跳过弹窗
 【7】周一批量刷剿灭脚本（老图龙门市区）(剩100玉）
 【8】周一批量刷剿灭脚本（新图轮换）
+【9】愚人号:单关卡循环刷图（需选中关卡）
 【88】退出,也可直接右上角关闭
 -----------------限时活动-----------------
 【001】灰蕈迷境刷蜜饼（需保证界面在活动界面）
@@ -73,7 +75,7 @@ while True:
     if "2" == opear:
         print("请输入刷图次数：")
         cnt = input("")
-        TestCase.AutoFight(int(cnt),4)
+        TestCase.AutoFight(int(cnt),2)
     if "3" == opear:
         TestCase.AutoMission()
     if "4" == opear:
@@ -86,7 +88,12 @@ while True:
         TestCase.MondayAutoFight(0)
     if "8" == opear:
         TestCase.MondayAutoFight(1)
+    if "9" == opear:
+        print("请输入刷图次数：")
+        cnt = input("")
+        TestCase.StultiferaNavis(int(cnt))
     if "001" == opear:
         print("请输入刷图次数：")
         cnt = input("")
         TestCase.FungiMist(int(cnt))
+

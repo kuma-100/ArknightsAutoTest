@@ -1,8 +1,12 @@
 # ArknightsAutoTest
 明日方舟护肝小助手  
-基于Airtest实现  AirtestIDE-win-1.2.5
+基于Airtest实现  [AirtestIDE-win-1.2.5](https://airtest.netease.com/download.html?download=win64/AirtestIDE-win-1.2.5.zip&&site=io "下载Airtest")
 具体操作见ArknightsAutoTest教程
 # 更新日志
+
+##### 2022-5-3
+1. 新增愚人号活动脚本
+2. 提高脚本稳定性
 
 ##### 2022-4-14
 1. 更新关卡结算界面判断图

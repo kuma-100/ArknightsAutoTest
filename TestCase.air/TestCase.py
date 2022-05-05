@@ -287,18 +287,18 @@ def FungiMist(cnt):
 
 # 愚人号活动
 def StultiferaNavis(cnt):
-    if exists(Template(r"愚人号代理指挥.png")):
-        touch(Template(r"愚人号代理指挥.png"))
+    if exists(Template(r"tpl1651716972583.png", record_pos=(0.399, 0.138), resolution=(2400, 1080))):
+        touch(Template(r"tpl1651716972583.png", record_pos=(0.399, 0.138), resolution=(2400, 1080)))
     for i in range(cnt):
-        wait(Template(r"tpl1651713484902.png", target_pos=5, record_pos=(0.439, 0.168), resolution=(2400, 1080)), timeout=30)
-        touch(Template(r"tpl1651713484902.png", target_pos=5, record_pos=(0.439, 0.168), resolution=(2400, 1080)))
+        wait(Template(r"tpl1651716589031.png", target_pos=7, record_pos=(0.421, 0.151), resolution=(2400, 1080)), timeout=30)
+        touch(Template(r"tpl1651716589031.png", target_pos=7, record_pos=(0.421, 0.151), resolution=(2400, 1080)))
         sleep(3)
         if exists(
                 Template(r"tpl1594288024016.png", threshold=0.8, record_pos=(-0.33, -0.061),
                          resolution=(2280, 1080))):
             touch(Template(r"tpl1594288083324.png", record_pos=(0.29, 0.141), resolution=(2280, 1080)))
-            wait(Template(r"tpl1651713484902.png", target_pos=5, record_pos=(0.439, 0.168), resolution=(2400, 1080)))
-            touch(Template(r"tpl1651713484902.png", target_pos=5, record_pos=(0.439, 0.168), resolution=(2400, 1080)))
+            wait(Template(r"tpl1651716589031.png", target_pos=7, record_pos=(0.421, 0.151), resolution=(2400, 1080)))
+            touch(Template(r"tpl1651716589031.png", target_pos=7, record_pos=(0.421, 0.151), resolution=(2400, 1080)))
         touch(Template(r"tpl1594285940292.png", record_pos=(0.304, 0.096), resolution=(2280, 1080)))
         sleep(30)
         FightEnd()

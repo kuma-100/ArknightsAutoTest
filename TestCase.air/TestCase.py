@@ -161,9 +161,14 @@ def CreditAccess():
     touch(Template(r"tpl1594601620037.png", record_pos=(-0.385, -0.09), resolution=(2280, 1080)))
     touch(Template(r"tpl1594601667186.png", record_pos=(0.19, 0.063), resolution=(2280, 1080)))
     wait(Template(r"tpl1599124536167.png", record_pos=(-0.424, -0.133), resolution=(1440, 810)), timeout=100)
+    i = 0
     while exists(Template(r"tpl1594601712421.png", record_pos=(0.408, 0.157), resolution=(2280, 1080))):
         touch(Template(r"tpl1594601712421.png", record_pos=(0.408, 0.157), resolution=(2280, 1080)))
         sleep(4)
+        wait(Template(r"tpl1599124536167.png", record_pos=(-0.424, -0.133), resolution=(1440, 810)), timeout=100)
+        i = i + 1
+        if i == 10:
+            break
     keyevent("BACK")
     touch(Template(r"tpl1594601922513.png", threshold=0.9, record_pos=(0.154, 0.095), resolution=(2280, 1080)))
     wait(Template(r"tpl1594601620037.png", record_pos=(-0.385, -0.09), resolution=(2280, 1080)))

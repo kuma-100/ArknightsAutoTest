@@ -15,7 +15,7 @@ except:
     dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:7555?cap_method=JAVACAP^&^&ori_method=ADBORI")
 
 try:
-    dev.minicap.get_stream()
+    # dev.minicap.get_stream()
 except:
     dev = connect_device("Android:///?cap_method=JAVACAP")
     G.add_device(dev)

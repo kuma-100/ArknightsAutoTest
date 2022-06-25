@@ -12,7 +12,8 @@ import TestCase
 try:
     dev = connect_device("Android:///")
 except:
-    dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:7555?cap_method=JAVACAP^&^&ori_method=ADBORI")
+    # dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:7555?cap_method=JAVACAP^&^&ori_method=ADBORI")
+    dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:7555")
 
 try:
     dev.minicap.get_stream()

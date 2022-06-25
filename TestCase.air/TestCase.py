@@ -192,6 +192,7 @@ def CompleteOpenRecruitment():
             touch(Template(r"tpl1596594437987.png", record_pos=(-0.207, 0.014), resolution=(2280, 1080)))
             wait(Template(r"tpl1596594512366.png", record_pos=(0.426, -0.208), resolution=(2280, 1080)))
             touch(Template(r"tpl1596594512366.png", record_pos=(0.426, -0.208), resolution=(2280, 1080)))
+            wait(Template(r"tpl1596594609163.png", record_pos=(0.219, 0.056), resolution=(2280, 1080)))
             sleep(2)
             touch(Template(r"tpl1596594609163.png", record_pos=(0.219, 0.056), resolution=(2280, 1080)))
 

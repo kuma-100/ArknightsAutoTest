@@ -1,8 +1,10 @@
 # ArknightsAutoTest
 明日方舟护肝小助手  
 基于Airtest实现  [AirtestIDE-win-1.2.14](https://airtest.netease.com/download.html?download=win64/AirtestIDE-win-1.2.14.zip&&site=io "下载Airtest")
-具体操作见ArknightsAutoTest教程，支持网易MUMU模拟器
+具体操作见ArknightsAutoTest教程，支持模拟器
 # 更新日志
+##### 2022-11-4
+1. 新增更多模拟器支持
 
 ##### 2022-5-3
 1. 新增愚人号活动脚本

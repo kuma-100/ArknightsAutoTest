@@ -174,7 +174,9 @@ def CreditAccess():
     wait(Template(r"tpl1594601620037.png", record_pos=(-0.385, -0.09), resolution=(2280, 1080)))
     keyevent("BACK")
     # 获取采购中心信用
+    wait(Template(r"tpl1594602022220.png", record_pos=(0.157, 0.084), resolution=(2280, 1080)))
     touch(Template(r"tpl1594602022220.png", record_pos=(0.157, 0.084), resolution=(2280, 1080)))
+    wait(Template(r"tpl1594602046474.png", record_pos=(0.353, -0.165), resolution=(2280, 1080)))
     touch(Template(r"tpl1594602046474.png", record_pos=(0.353, -0.165), resolution=(2280, 1080)))
     if exists(Template(r"tpl1594602075044.png", record_pos=(0.293, -0.21), resolution=(2280, 1080))):
         touch(Template(r"tpl1594602075044.png", record_pos=(0.293, -0.21), resolution=(2280, 1080)))

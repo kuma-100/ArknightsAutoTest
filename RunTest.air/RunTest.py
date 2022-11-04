@@ -8,12 +8,61 @@ from airtest.core.api import using
 using("TestCase.air")
 import TestCase
 
-# 优先连接手机，其次连接模拟器（目前仅支持网易mumu）
-try:
-    dev = connect_device("Android:///")
-except:
+DEVICE_SELECTION = """
+欢迎使用明日方舟护肝小能手\(^o^)/
+请输入要使用的设备：
+【1】手机
+【2】Mumu模拟器
+【3】夜神模拟器
+【4】雷电模拟器
+【5】逍遥模拟器
+【6】iTools
+【7】天天模拟器
+【8】海马玩模拟器
+【9】BlueStacks
+"""
+
+print(DEVICE_SELECTION)
+while True:
+    option = input("")
+    if option == "1":
+        dev = connect_device("Android:///")
+        break
+    elif option == "2":
+        dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:7555")#mumu
+        break
+    elif option == "3":
+        dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:62001")#夜神
+        break
+    elif option == "4":
+        dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:5554")#雷电
+        break
+    elif option == "5":
+        dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:21503")#逍遥
+        break
+    elif option == "6":
+        dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:54001")#iTools
+        break
+    elif option == "7":
+        dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:6555")#天天
+        break
+    elif option == "8":
+        dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:26744")#海马玩
+        break
+    elif option == "9":
+        dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:5555")#BlueStacks
+        break
+    else:
+        print("请输入正确的选项！！请重新输入！")
+        continue
+
+
+# try:
+    # dev = connect_device("Android:///")
+# except:
     # dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:7555?cap_method=JAVACAP^&^&ori_method=ADBORI")
-    dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:7555")
+    # dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:7555")#mumu
+    # dev = connect_device("Android://127.0.0.1:5037/127.0.0.1:62001")#夜神
 
 try:
     dev.minicap.get_stream()

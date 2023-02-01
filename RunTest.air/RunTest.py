@@ -5,8 +5,7 @@ __title__ = "护肝小能手"
 
 from airtest.core.api import *
 from airtest.core.api import using
-using("TestCase.air")
-import TestCase
+
 
 DEVICE_SELECTION = """
 欢迎使用明日方舟护肝小能手\(^o^)/
@@ -62,6 +61,9 @@ except:
     dev = connect_device("Android:///?cap_method=JAVACAP")
     G.add_device(dev)
 
+using("TestCase.air")
+import TestCase
+
 auto_setup(__file__)
 
 PRINT_INFO = """
@@ -81,6 +83,7 @@ PRINT_INFO = """
 【88】退出,也可直接右上角关闭
 -----------------限时活动-----------------
 【001】灰蕈迷境刷蜜饼（需保证界面在活动界面）
+【002】生息演算（需保证界面在活动界面）
 """
 
 while True:
@@ -120,5 +123,9 @@ while True:
         print("请输入刷图次数：")
         cnt = input("")
         TestCase.FungiMist(int(cnt))
+    elif "002" == opear:
+        print("请输入刷图次数：")
+        cnt = input("")
+        TestCase.ReclamationAlgorithm(int(cnt))
     else:
         print("请输入正确的选项！！请重新输入！")

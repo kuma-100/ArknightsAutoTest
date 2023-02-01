@@ -6,9 +6,17 @@ from airtest.core.api import *
 
 auto_setup(__file__)
 
+#设置超时时长
 timeout = 6000
+# 获取设备的高度和宽度
+width, height = device().get_current_resolution()
 
-
+def WaitTouch(img,s = 0,timeout = 20):
+    wait(img,timeout)
+    if s :
+        sleep(s)
+    touch(img)
+    
 def OpenGame():
     start_app("com.hypergryph.arknights")
     wait(Template(r"tpl1594892913227.png", record_pos=(-0.003, 0.205), resolution=(2280, 1080)), timeout)
@@ -170,6 +178,7 @@ def CreditAccess():
         if i == 10:
             break
     keyevent("BACK")
+    wait(Template(r"tpl1594601922513.png", threshold=0.9, record_pos=(0.154, 0.095), resolution=(2280, 1080)))
     touch(Template(r"tpl1594601922513.png", threshold=0.9, record_pos=(0.154, 0.095), resolution=(2280, 1080)))
     wait(Template(r"tpl1594601620037.png", record_pos=(-0.385, -0.09), resolution=(2280, 1080)))
     keyevent("BACK")
@@ -310,4 +319,60 @@ def StultiferaNavis(cnt):
         touch(Template(r"tpl1594285940292.png", record_pos=(0.304, 0.096), resolution=(2280, 1080)))
         sleep(30)
         FightEnd()
+
+# 生息演算
+def ReclamationAlgorithm(cnt):
+    #预加载资源
+    ZiYuanQu_1 = (Template(r"tpl1675217434425.png", record_pos=(-0.167, -0.102), resolution=(1280, 720)))
+    ZiYuanQu_4 = (Template(r"tpl1675214931261.png", record_pos=(0.104, 0.152), resolution=(1280, 720)))
+    ZiYuanQu_3_1 = (Template(r"tpl1675221778016.png", record_pos=(0.167, -0.098), resolution=(1280, 720)))
+    ZiYuanQu_5_1 = (Template(r"tpl1675222591413.png", record_pos=(-0.002, -0.019), resolution=(1280, 720)))
+    ZiYuanQuList = [ZiYuanQu_1,ZiYuanQu_4,ZiYuanQu_3_1,ZiYuanQu_5_1]
+    #正式流程
+    for i in range(cnt):
+        touch(Template(r"tpl1675214261103.png", record_pos=(0.441, 0.232), resolution=(1280, 720)))
+        WaitTouch(Template(r"tpl1675214315632.png", record_pos=(0.393, -0.243), resolution=(1280, 720)))
+        if not exists(Template(r"tpl1675214436195.png", record_pos=(0.084, -0.172), resolution=(1280, 720))):
+            touch(Template(r"tpl1675214384977.png", record_pos=(-0.138, -0.133), resolution=(1280, 720)))
+            touch(Template(r"tpl1675214436195.png", record_pos=(0.084, -0.172), resolution=(1280, 720)))
+            touch(Template(r"tpl1675214473576.png", record_pos=(0.252, 0.248), resolution=(1280, 720)))
+        WaitTouch(Template(r"tpl1675214657274.png", record_pos=(0.34, 0.236), resolution=(1280, 720)))
+        WaitTouch(Template(r"tpl1675214692482.png", record_pos=(0.313, 0.191), resolution=(1280, 720)))
+        for i in range(4):
+            WaitTouch(Template(r"tpl1675214740881.png", threshold=0.8, record_pos=(0.448, 0.245), resolution=(1280, 720)),2,timeout=60)
+            sleep(2)
+            WaitTouch(Template(r"tpl1675214811630.png", record_pos=(0.0, -0.001), resolution=(1280, 720)),4)
+            for i in range(2):
+                for i in range(len(ZiYuanQuList)):
+                    if exists(ZiYuanQuList[i]):
+                        touch(ZiYuanQuList[i])
+                        break;
+                    #找不到资源区的时候随便点个靠下的区
+                    if i == (len(ZiYuanQuList)-1):
+                        touch(width*0.5,height*0.82)
+                touch(Template(r"tpl1675214965292.png", record_pos=(0.433, 0.207), resolution=(1280, 720)))
+                WaitTouch(Template(r"tpl1675214994413.png", record_pos=(0.372, 0.233), resolution=(1280, 720)))
+                touch(Template(r"tpl1675215023667.png", record_pos=(0.382, -0.041), resolution=(1280, 720)))
+                touch(Template(r"tpl1598677224290.png", threshold=0.9, record_pos=(0.174, 0.09), resolution=(2400, 1080)))
+                WaitTouch(Template(r"tpl1675215113977.png", record_pos=(-0.44, -0.238), resolution=(1280, 720)),2,timeout=60)
+                touch(Template(r"tpl1675215156725.png", record_pos=(0.356, 0.05), resolution=(1280, 720)))
+                WaitTouch(Template(r"tpl1675215290214.png", record_pos=(-0.445, -0.045), resolution=(1280, 720)),1)
+                wait(Template(r"tpl1675220050335.png", record_pos=(-0.466, -0.252), resolution=(1280, 720)))
+            touch(Template(r"tpl1675215610059.png", record_pos=(0.398, -0.242), resolution=(1280, 720)))
+        WaitTouch(Template(r"tpl1675214740881.png", threshold=0.8, record_pos=(0.448, 0.245), resolution=(1280, 720)),2,timeout=60)
+        sleep(2)
+        keyevent("BACK")
+        touch(Template(r"tpl1675216481820.png", record_pos=(0.135, 0.232), resolution=(1280, 720)))
+        touch(Template(r"tpl1598677224290.png", threshold=0.9, record_pos=(0.174, 0.09), resolution=(2400, 1080)))
+        touch(Template(r"tpl1675216538645.png", record_pos=(0.409, 0.205), resolution=(1280, 720)))
+        touch(Template(r"tpl1675216592266.png", record_pos=(0.456, 0.204), resolution=(1280, 720)))
+        if exists(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080))):
+            touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
+
+        
+
+
+
+        
+
 

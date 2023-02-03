@@ -349,10 +349,13 @@ def ReclamationAlgorithm(cnt):
                         break;
                     #找不到资源区的时候随便点个靠下的区
                     if i == (len(ZiYuanQuList)-1):
-                        touch(width*0.5,height*0.82)
+#                         touch((width*0.5,height*0.82))
+                        keyevent("BACK")
+                        touch(Template(r"tpl1675400949440.png", record_pos=(0.443, 0.233), resolution=(1280, 720)))
+                        i = 0
                 touch(Template(r"tpl1675214965292.png", record_pos=(0.433, 0.207), resolution=(1280, 720)))
                 WaitTouch(Template(r"tpl1675214994413.png", record_pos=(0.372, 0.233), resolution=(1280, 720)))
-                touch(Template(r"tpl1675215023667.png", record_pos=(0.382, -0.041), resolution=(1280, 720)))
+                WaitTouch(Template(r"tpl1675215023667.png", record_pos=(0.382, -0.041), resolution=(1280, 720)))
                 touch(Template(r"tpl1598677224290.png", threshold=0.9, record_pos=(0.174, 0.09), resolution=(2400, 1080)))
                 WaitTouch(Template(r"tpl1675215113977.png", record_pos=(-0.44, -0.238), resolution=(1280, 720)),2,timeout=60)
                 touch(Template(r"tpl1675215156725.png", record_pos=(0.356, 0.05), resolution=(1280, 720)))

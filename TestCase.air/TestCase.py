@@ -328,6 +328,12 @@ def ReclamationAlgorithm(cnt):
     ZiYuanQu_3_1 = (Template(r"tpl1675221778016.png", record_pos=(0.167, -0.098), resolution=(1280, 720)))
     ZiYuanQu_5_1 = (Template(r"tpl1675222591413.png", record_pos=(-0.002, -0.019), resolution=(1280, 720)))
     ZiYuanQuList = [ZiYuanQu_1,ZiYuanQu_4,ZiYuanQu_3_1,ZiYuanQu_5_1]
+    p6 = (width*0.31,height*0.62)
+    p1 = (width*0.33,height*0.32)
+    p2 = (width*0.49,height*0.19)
+    p3 = (width*0.67,height*0.33)
+    p4 = (width*0.69,height*0.62)
+    pList = [p6,p1,p2,p3,p4]
     #正式流程
     for i in range(cnt):
         touch(Template(r"tpl1675214261103.png", record_pos=(0.441, 0.232), resolution=(1280, 720)))
@@ -343,16 +349,34 @@ def ReclamationAlgorithm(cnt):
             sleep(2)
             WaitTouch(Template(r"tpl1675214811630.png", record_pos=(0.0, -0.001), resolution=(1280, 720)),4)
             for i in range(2):
-                for i in range(len(ZiYuanQuList)):
+                z = 0#循环参数
+                o = 0#最大重复次数，超出就结束循环
+                p = 0#超出最大重复后，循环寻找坐标
+                while z < len(ZiYuanQuList):
                     if exists(ZiYuanQuList[i]):
                         touch(ZiYuanQuList[i])
                         break;
-                    #找不到资源区的时候随便点个靠下的区
-                    if i == (len(ZiYuanQuList)-1):
-#                         touch((width*0.5,height*0.82))
+                    #找不到资源区的时候重新进入重新找，超过3次结束
+                    if z == (len(ZiYuanQuList)-1):
+                        
                         keyevent("BACK")
                         touch(Template(r"tpl1675400949440.png", record_pos=(0.443, 0.233), resolution=(1280, 720)))
-                        i = 0
+                        sleep(3)
+                        z = 0
+                        o = o + 1
+                        if o > 2:
+                            #找不到资源区的时候随便点个靠下的区
+                            touch((width*0.5,height*0.82))
+                            break
+                        continue
+                    z = z + 1
+                while not exists(Template(r"tpl1675214965292.png", record_pos=(0.433, 0.207), resolution=(1280, 720))):
+                    keyevent("BACK")
+                    keyevent("BACK")
+                    touch(Template(r"tpl1675400949440.png", record_pos=(0.443, 0.233), resolution=(1280, 720)))
+                    sleep(3)
+                    touch(pList[p])
+                    p = p + 1
                 touch(Template(r"tpl1675214965292.png", record_pos=(0.433, 0.207), resolution=(1280, 720)))
                 WaitTouch(Template(r"tpl1675214994413.png", record_pos=(0.372, 0.233), resolution=(1280, 720)))
                 WaitTouch(Template(r"tpl1675215023667.png", record_pos=(0.382, -0.041), resolution=(1280, 720)))
@@ -367,7 +391,7 @@ def ReclamationAlgorithm(cnt):
         keyevent("BACK")
         touch(Template(r"tpl1675216481820.png", record_pos=(0.135, 0.232), resolution=(1280, 720)))
         touch(Template(r"tpl1598677224290.png", threshold=0.9, record_pos=(0.174, 0.09), resolution=(2400, 1080)))
-        touch(Template(r"tpl1675216538645.png", record_pos=(0.409, 0.205), resolution=(1280, 720)))
+        WaitTouch(Template(r"tpl1675216538645.png", record_pos=(0.409, 0.205), resolution=(1280, 720)))
         touch(Template(r"tpl1675216592266.png", record_pos=(0.456, 0.204), resolution=(1280, 720)))
         if exists(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080))):
             touch(Template(r"tpl1594297901838.png", record_pos=(0.004, -0.165), resolution=(2280, 1080)))
